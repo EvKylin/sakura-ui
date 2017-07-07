@@ -1,0 +1,42 @@
+// Created by QiHan Wang on 2017/6/8.
+@import "../../base/fn";
+
+.#{$prefix}btn{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 .3rem;
+  //border:1px solid $border-color-base;
+  border:0;
+  font-size: .36rem;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 2.5;
+  border-radius: .04rem;
+  outline: none;
+
+  &-mini,
+  &-inline{
+    width: auto;
+    display: inline-block;
+  }
+  &-mini{
+
+  }
+  &-inline{
+
+  }
+
+  &:disabled,&.disabled{
+    background-color: #eee;
+  }
+
+}
+
+.#{$prefix}btn-primary{
+  background-color: #6db8eb;
+  color: #fff;
+
+  &:disabled{
+    background-color: #c1c1c1;
+  }
+}

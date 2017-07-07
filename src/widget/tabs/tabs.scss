@@ -1,0 +1,60 @@
+@import "../../base/fn";
+@import "navbar";
+@import "tabbar";
+
+$tabs-tab-height: .87rem;
+
+.#{$prefix}tabs {
+  position: relative;
+}
+
+.#{$prefix}tabs-bar {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+}
+
+.#{$prefix}tabs-tab {
+  display: flex;
+  height: $tabs-tab-height;
+  line-height: $tabs-tab-height;
+  flex: 1;
+  justify-content: center;
+  font-size: .3rem;
+
+  border-bottom: 1px solid $border-color-base;
+  -webkit-tap-highlight-color: transparent;
+  &:not(:first-child) {
+    border-left: 1px solid $border-color-base;
+  }
+
+  &-active,
+  &:active{
+    background-color: $background-color-base;
+  }
+}
+
+.#{$prefix}tabs-content {
+  position: relative;
+}
+
+
+//  满屏的Tab
+
+.#{$prefix}tabs-full{
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: $tabs-tab-height;
+  overflow: hidden;
+
+  .#{$prefix}tabs-bar{
+    margin-top: -$tabs-tab-height;
+  }
+
+  .#{$prefix}tabs-content{
+
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}

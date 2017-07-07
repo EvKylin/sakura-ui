@@ -1,0 +1,30 @@
+// Created by QiHan Wang on 2017/6/5.
+@import "../../base/fn";
+
+.#{$prefix}toptips {
+  position: fixed;
+  //position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: .1rem;
+  color: #fff;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  z-index: 10040;
+
+  &-warn {
+    background-color: $background-color-toptips-warn;
+  }
+
+  &-success {
+    background-color: $background-color-toptips-success;
+  }
+
+  &-primary {
+    background-color: $background-color-toptips-primary;
+  }
+}

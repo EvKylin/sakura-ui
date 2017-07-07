@@ -1,0 +1,55 @@
+// Created by QiHan Wang on 2017/6/5.
+@import "../../base/fn";
+
+.#{$prefix}dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10050;
+  transform: translate(-50%, -80%);
+
+  width: 80%;
+  max-width: 6rem;
+  text-align: center;
+  border-radius: .06rem;
+  background-color: #fff;
+  overflow: hidden;
+
+  &-hd{
+    font-size: .32rem;
+    padding-top:.32rem
+  }
+
+  &-bd {
+    min-height: .8rem;
+    padding: .8rem .4rem .48rem;
+    color: $font-color-gray;
+  }
+  &-ft {
+    border-top: 1px solid $border-color-base;
+    display: flex;
+    line-height: .96rem;
+    font-size: .36rem;
+  }
+
+  &-btn {
+    display: block;
+    flex: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: $font-color-darkGary;
+
+    &:not(:first-child) {
+      border-left: 1px solid $border-color-base;
+    }
+    &:active {
+      background-color: $background-color-base;
+    }
+
+    &-confirm{
+      color: #00CC44;
+    }
+    &-cancel{
+      color: $font-color-gray;
+    }
+  }
+}

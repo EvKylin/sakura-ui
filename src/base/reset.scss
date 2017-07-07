@@ -1,0 +1,66 @@
+@import "fn";
+@import "normalize";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: $sakuraFontDefault;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Tool
+.mask {
+  @include createMask;
+}
+
+//  close
+.sk-close {
+  display: inline-block;
+  width: .48rem;
+  height: .48rem;
+  font-size: inherit;
+  position: relative;
+  color: #b5b5b5;
+  transform: rotate(45deg);
+
+  &::before, &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: inherit;
+  }
+  &::before {
+    border-left: .02rem solid;
+    height: .44rem;
+  }
+  &::after {
+    border-top: .02rem solid;
+    width: .44rem;
+  }
+
+}

@@ -1,0 +1,26 @@
+// Created by QiHan Wang on 2017/6/2.
+@import "../../base/fn";
+
+.#{$prefix}panel {
+  &:not(:first-child) {
+    margin-top: .2rem;
+  }
+
+  background-color: #fff;
+  border-top: 1px solid $border-color-panel;
+  border-bottom: 1px solid $border-color-panel;
+}
+
+.#{$prefix}panel-hd {
+  padding: .15rem;
+  border-bottom: 1px solid $border-color-panel;
+  font-size: $font-size-base;
+  color: $font-color-gray;
+}
+
+.#{$prefix}panel-bd {
+}
+
+.#{$prefix}panel-ft {
+  border-top:1px solid $border-color-base;
+}

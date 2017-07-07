@@ -1,0 +1,87 @@
+// Created by QiHan Wang on 2017/6/10.
+@import "../../base/fn";
+
+$textarea-border-color: #e0e0e0;
+
+// 文本域
+.#{$prefix}textarea {
+
+  display: block;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  &-bordered {
+    //border: 1px solid $textarea-border-color;
+    padding: .06rem .15rem;
+    border-radius: .06rem;
+    box-sizing: border-box;
+    outline: 1px solid $textarea-border-color;
+  }
+
+  &-counter {
+    text-align: right;
+    font-size: .24rem;
+    color: $font-color-gray;
+  }
+}
+
+
+// 文本框
+.#{$prefix}input{
+  width: 100%;
+  border: 1px solid transparent;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: 1.41176471em;
+  line-height: 1.41176471;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+  &-bordered{}
+  &-inline{
+    width: auto;
+  }
+}
+
+// checkbox
+
+.#{$prefix}checkbox{
+  position: absolute;
+  clip: rect(0,0,0,0);
+
+  & + i::before{
+    content: '\a0';
+    display: inline-block;
+    vertical-align: .4em;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: .4em;
+    background: silver;
+    text-indent: .3em;
+    line-height: .65;
+  }
+
+  &:checked + i::before {
+    content: '\2713';
+    background: #26a0f9;
+  }
+
+  /*&:focus + i::before {
+    box-shadow: 0 0 .1em .1em #58a;
+  }*/
+
+  &:disabled + i::before {
+    background: gray;
+    box-shadow: none;
+    color: #555;
+    cursor: not-allowed;
+  }
+}
